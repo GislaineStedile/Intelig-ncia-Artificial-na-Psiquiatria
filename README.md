@@ -1,9 +1,9 @@
 ## 👨‍🎓Nome do Gupo
 - Gislaine Aparecida Souza Stedile
+- Pedro Henrique Araujo Silva,
 - Guilherme Moura da Silva
 - Heverton Nascimento de Oliveira
 - Rodrigo Pires Figueiredo
-- Pedro Henrique Araujo Silva,
 
 ## ⚙Ferramentas
 - Intellij IDEA
