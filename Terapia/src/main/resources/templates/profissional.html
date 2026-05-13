@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Profissionais de Saúde</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header><h1>Área do Profissional de Saúde</h1></header>
+<nav>
+    <a th:href="@{/}">Início</a>
+    <a th:href="@{/pacientes}">Paciente</a>
+    <a th:href="@{/emergencias}">Emergência</a>
+    <a th:href="@{/autoavaliacoes}">Autoavaliações</a>
+    <a th:href="@{/tcc}">TCC</a>
+</nav>
+
+<section>
+    <form th:action="@{/profissionais}" method="post" class="card">
+        <h2>Novo Profissional</h2>
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="especialidade" placeholder="Especialidade">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Salvar</button>
+    </form>
+
+    <div th:each="p : ${profissionais}" class="card">
+        <h2 th:text="${p.nome}">Nome</h2>
+        <p th:text="${p.especialidade}">Especialidade</p>
+        <p th:text="${p.email}">Email</p>
+        <a th:href="@{'/profissionais/delete/' + ${p.id}}">Excluir</a>
+    </div>
+</section>
+</body>
+</html>
